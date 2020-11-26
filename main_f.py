@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(871, 548)
+        MainWindow.resize(871, 591)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
@@ -22,6 +22,13 @@ class Ui_MainWindow(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
+        self.pushButton_add = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_add.setGeometry(QtCore.QRect(20, 530, 191, 23))
+        self.pushButton_add.setObjectName("pushButton_add")
+        self.label_error = QtWidgets.QLabel(self.centralwidget)
+        self.label_error.setGeometry(QtCore.QRect(780, 530, 47, 13))
+        self.label_error.setText("")
+        self.label_error.setObjectName("label_error")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 871, 21))
@@ -37,3 +44,4 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Table"))
+        self.pushButton_add.setText(_translate("MainWindow", "Добавить / редактировать данные"))
